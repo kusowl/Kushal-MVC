@@ -34,7 +34,7 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
 
         if ($callback === false) {
-            return "Not found 404";
+            return $this->renderView('_404');;
         }
 
         // Check if the callback is view
